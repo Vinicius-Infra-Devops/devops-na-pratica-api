@@ -1,21 +1,81 @@
-# Projeto DevOps na Prática
+# 🚀 DevOps na Prática — Aula 1
 
-Este projeto envolve a criação e gerenciamento de uma API com Node.js, Docker e Kubernetes. Durante as aulas, aprendemos como:
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-blue)
+![Docker](https://img.shields.io/badge/docker-ready-green)
+![Kubernetes](https://img.shields.io/badge/kubernetes-configurado-blueviolet)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-- Configurar uma API com Express e Docker.
-- Criar um pipeline CI/CD.
-- Realizar deploy em Kubernetes.
-  
-## Como rodar o projeto
+---
 
-1. Clone o repositório.
-2. Instale as dependências com `npm install`.
-3. Execute a API com `node index.js`.
-4. Para a parte de Kubernetes, siga as instruções no diretório `k8s/`.
+## 🎯 Objetivo da Aula
 
-## Tecnologias utilizadas
+Implementar um pipeline DevOps do zero, com foco em **Docker**, **Kubernetes**, **GitHub Actions** e **Node.js**, simulando um deploy real de uma API em ambiente de orquestração.
 
-- Node.js
-- Express
-- Docker
-- Kubernetes
+---
+
+## 🧱 Estrutura do Projeto
+
+devops-na-pratica-api/ ├── api-node-express/ # Código da API Node.js │ ├── Dockerfile │ ├── index.js │ ├── package.json │ └── ... ├── devops-na-pratica/ │ ├── infra/ │ │ └── terraform/ # (Aula 2 em diante) │ └── k8s/ # Manifests do Kubernetes │ ├── deployment.yaml │ └── service.yaml └── README.md
+
+
+---
+
+## 🛠️ O que foi feito
+
+### ✅ 1. API Express
+- Criamos uma API básica com Node.js e Express.
+- Arquivo principal: `index.js`
+
+### ✅ 2. Docker
+- Criamos o `Dockerfile`
+- Build e push para o Docker Hub:
+```bash
+docker build -t vinicius994/api-node-devops:latest .
+docker push vinicius994/api-node-devops:latest
+
+### ✅ 3. Kubernetes
+
+    Criamos os manifests:
+
+        deployment.yaml
+
+        service.yaml
+
+    Deploy com kubectl apply -f
+
+### ✅ 4. Git & GitHub
+
+    Projeto versionado com Git.
+
+    Integração com repositório GitHub.
+
+    Criamos e autenticamos com chave SSH.
+
+✅ 5. CI/CD com GitHub Actions (introdução)
+
+    Setup inicial da automação CI/CD (aula 2 será o foco)
+
+curl http://<minikube-ip>:<nodeport>/  # exemplo:
+curl http://192.168.49.2:32534/
+
+🖼️ Prints do projeto
+✔️ API rodando no terminal:
+
+✔️ Docker Hub:
+
+📌 Próximas Aulas
+
+🔜 Aula 2:
+
+    Introdução ao Terraform
+
+    Infraestrutura como código
+
+    Pipeline CI/CD com GitHub Actions e deploy automático no Kubernetes
+
+👨‍🏫 Parabéns!
+
+Você chegou até aqui com a API rodando no Kubernetes, imagem publicada no Docker Hub e repositório configurado! 🚀👏
+Agora estamos prontos para entrar no mundo real do DevOps com Terraform + GitHub Actions + IAC!
+
+
