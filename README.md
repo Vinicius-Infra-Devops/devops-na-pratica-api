@@ -60,6 +60,8 @@ curl http://192.168.49.2:32534/
 
 🖼️ Prints do projeto
 ✔️ API rodando no terminal:
+![image](https://github.com/user-attachments/assets/793ee99a-df67-4ea9-8389-de55888f5049)
+
 
 ✔️ Docker Hub:
 
