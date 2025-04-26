@@ -1,17 +1,12 @@
-name: Usando Action Pronta - Checkout
+name: Workflow manual
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   checkout-code:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Usando o actions/checkout
-      uses: actions/checkout@v4
-
-    - name: Listando arquivos do repositório
-      run: ls -la
+    - name: Rodando um job manualmente
+      run: echo "Este workflow foi iniciado maualmente"
