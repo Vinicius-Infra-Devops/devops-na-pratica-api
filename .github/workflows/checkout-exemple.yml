@@ -1,12 +1,14 @@
-name: Workflow manual
+nname: Salvando Artifacts
 
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
-  checkout-code:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Rodando um job manualmente
-      run: echo "Este workflow foi iniciado maualmente"
+      - run: echo "Relatório gerado" > relatorio.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: relatorio
+          path: relatorio.txt
+
