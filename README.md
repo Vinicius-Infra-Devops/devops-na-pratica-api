@@ -5,7 +5,7 @@
 ![Kubernetes](https://img.shields.io/badge/kubernetes-configurado-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
----
+----
 
 ## 🎯 Objetivo da Aula
 
